@@ -1,0 +1,7 @@
+The attached solution uses the latest Android API as it suits the assignment, especially for the background location tracing. For the older Android version I relies on the compatibility libraries. In particular, it mean that in order to run the application from Eclipse, one have to setup Google API authentication key in Android manifest.
+   The locations are collected in the data structure assigned to the Android application instance. Both foreground and background location collection add location to the central data structure; the activity employs the data structure for track visualization and speed computation.
+   The background location collection is implemented using Google API client capability of delivering the intents with bundled location to the given service. As services are the application components with longest life time, I decided not to employ persistence.
+   When the activity UI is not visible, the application creates the notification in order to let end user know that some application uses location service, affecting the power consumption.
+   The application contains no OO hierachy other than three component classes inheriting from Android framework ones.
+   To shorten development time, I've used circular buffer from Apache Foundation collection set. 
+   I couldn't properly test the solution on real devices; Android emulator was used instead.
