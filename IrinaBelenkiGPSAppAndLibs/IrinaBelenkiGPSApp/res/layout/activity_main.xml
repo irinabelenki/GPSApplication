@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.greenroad.candidate.assignment.MainActivity" >
+    <fragment
+        android:id="@+id/map"
+        android:name="com.greenroad.candidate.assignment.MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        
+        <ToggleButton 
+    		android:id="@+id/toggleTrack"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textOn="Tracking"
+    		android:textOff="No Tracking"
+    		android:onClick="onTrackingClicked"/>
+
+         <TextView
+             android:id="@+id/time_field"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:textColor="#000000"
+             android:textStyle="bold" />
+         
+         <TextView
+             android:id="@+id/location_info"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:textColor="#000000"
+             android:textStyle="bold" />
+         
+         <TextView
+             android:id="@+id/speed"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:textColor="#000000"
+             android:textStyle="bold" />
+    </LinearLayout>  
+</RelativeLayout>
